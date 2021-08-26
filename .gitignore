@@ -1,7 +1,9 @@
 .venv/
 __pycache__/
 
-Calibri_Regular.ttf
+/Calibri_Regular.ttf
+
+/pictures
 
 apiTwitterCongif.json
 appInstagramConfig.json

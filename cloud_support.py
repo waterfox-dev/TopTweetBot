@@ -11,7 +11,7 @@ cloudinary.config(
 )
 
 def upload(file_name) :
-    a = cloudinary.uploader.upload(f"{file_name}.png", 
+    a = cloudinary.uploader.upload(f"pictures/{file_name}.png", 
         public_id = "TopTweetOfDay")
     
     return a['secure_url']

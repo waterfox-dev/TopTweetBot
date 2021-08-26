@@ -28,16 +28,16 @@ def text_to_image(text, image = None) :
 
     else :
         img = Image.new('RGB', (1500,1500), color  = (0,0,0))
-        fnt =  ImageFont.truetype("Calibri Regular.ttf", 75)
+        fnt =  ImageFont.truetype("font/Calibri_Regular.ttf", 75)
 
         with Pilmoji(img) as pilmoji :
-            pilmoji.text((200,300), text, font = fnt, fill = (230,230,230))
+            pilmoji.text((150,300), text, font = fnt, fill = (230,230,230))
         
         shape = [(40, 40), (1460, 1460)]
         rectangle_draw = ImageDraw.Draw(img)
         rectangle_draw.rectangle(shape, outline="#1d9bf0", width=5)
 
-        img.save("text_to_image.png")
+        img.save("pictures/text_to_image.png")
     
 
 def transform(text, author):
