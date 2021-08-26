@@ -77,5 +77,3 @@ def transform(text, author):
     new_text += f"\n \n \nAuthor : {author}"
     
     return new_text
-
-tod = get_tweet()

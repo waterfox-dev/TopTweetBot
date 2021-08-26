@@ -44,10 +44,10 @@ def postInstagramQuote(image_link, caption):
 top_tweet = get_tweet()
 
 try :
-    text_to_image(transform(tod.text, tod.user.name), tod.entities['media'][0]['media_url'])
+    text_to_image(transform(top_tweet.text,top_tweet.user.name),top_tweet.entities['media'][0]['media_url'])
 
 except :
-    text_to_image(transform(tod.full_text, tod.user.name))
+    text_to_image(transform(top_tweet.full_text,top_tweet.user.name))
 
 a = upload("text_to_image")
 
