@@ -8,7 +8,7 @@ def text_to_image(text, image = None) :
 
     if image != None :
         img = Image.new('RGB', (1500,1500), color  = (0,0,0))
-        fnt =  ImageFont.truetype("Calibri Regular.ttf", 75)
+        fnt =  ImageFont.truetype("font/Calibri Regular.ttf", 75)
 
         with Pilmoji(img) as pilmoji :
             pilmoji.text((175,175), text, font = fnt, fill = (255,255,255))
@@ -44,7 +44,7 @@ def transform(text, author):
     text = list(text)
     lign_return = 0
     for element in range(len(text)) :
-        if (element > 30 and element < 50 and text[element] == " " and lign_return == 0) :
+        if (element > 25 and element < 50 and text[element] == " " and lign_return == 0) :
             text[element] = '\n'
             lign_return += 1
         elif (element > 70 and element < 90 and text[element] == " "  and lign_return == 1) :
