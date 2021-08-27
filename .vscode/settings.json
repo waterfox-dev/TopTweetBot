@@ -14,5 +14,6 @@
     "rpc.appName": "Visual Studio Code",
     "rpc.buttonInactiveLabel": "Not sync with github",
     "rpc.buttonEnabled": true,
-    "rpc.id": "782685898163617802"
+    "rpc.id": "782685898163617802",
+    "rpc.enabled": true
 }
