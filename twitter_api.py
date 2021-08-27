@@ -1,9 +1,13 @@
 import tweepy as tw
+import json
 
-consumer_key= ''
-consumer_secret= ''
-access_token= ''
-access_token_secret= ''
+with open("apiTwitterConfig.json","r")  as config_file :
+    config_file = json.load(config_file)
+
+consumer_key= config_file['key']
+consumer_secret= config_file['secret']
+access_token= config_file['access_token']
+access_token_secret= config_file['secret_access_token']
 
 auth = tw.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
