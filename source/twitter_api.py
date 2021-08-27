@@ -1,7 +1,7 @@
 import tweepy as tw
 import json
 
-with open("apiTwitterConfig.json","r")  as config_file :
+with open("config/apiTwitterConfig.json","r")  as config_file :
     config_file = json.load(config_file)
 
 consumer_key= config_file['key']

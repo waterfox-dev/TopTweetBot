@@ -4,7 +4,4 @@ __pycache__/
 /Calibri_Regular.ttf
 
 /pictures
-
-apiTwitterConfig.json
-appInstagramConfig.json
-cloudinaryConfig.json
+/config

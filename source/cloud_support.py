@@ -2,7 +2,7 @@ import cloudinary.uploader
 import json
 import os
 
-with open("cloudinaryConfig.json", "r") as cc :
+with open("config/cloudinaryConfig.json", "r") as cc :
     cc = json.load(cc)
 
 cloudinary.config( 

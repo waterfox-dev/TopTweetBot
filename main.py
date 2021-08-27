@@ -1,11 +1,11 @@
 import requests
 import json
 
-from twitter_api import *
-from text_to_image import *
-from cloud_support import *
+from source.twitter_api import *
+from source.text_to_image import *
+from source.cloud_support import *
 
-with open("appInstagramConfig.json", 'r') as read_file:
+with open("config/appInstagramConfig.json", 'r') as read_file:
     read_file = json.load(read_file)
 
 
