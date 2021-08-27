@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "../source"
+        }
+    ],
+
+    "settings":  {
+        "[python]": {
+            "editor.wordBasedSuggestions": false
+        }
+    }
+    
+}
