@@ -4,16 +4,22 @@
         "**/.git": false,
         "**/.hg": false,
         "**/.svn": false,
-        "**/CVS": false
+        "**/CVS":  true
     },
+
     "search.exclude": {
         "**/*.code-search": false,
         "**/bower_components": false,
         "**/node_modules": false
     },
+
     "rpc.appName": "Visual Studio Code",
-    "rpc.buttonInactiveLabel": "Not sync with github",
+    "rpc.buttonInactiveLabel": "View Repository",
     "rpc.buttonEnabled": true,
     "rpc.id": "782685898163617802",
-    "rpc.enabled": true
-}
+    "rpc.enabled": true,
+    "rpc.buttonActiveLabel": "View Repository",
+    "git.enabled": true,
+    "rpc.buttonInactiveUrl": "https://github.com/waterfox-dev/TopTweetBot"
+
+}   
