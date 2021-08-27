@@ -10,5 +10,9 @@
         "**/*.code-search": false,
         "**/bower_components": false,
         "**/node_modules": false
-    }
+    },
+    "rpc.appName": "Visual Studio Code",
+    "rpc.buttonInactiveLabel": "Not sync with github",
+    "rpc.buttonEnabled": true,
+    "rpc.id": "782685898163617802"
 }
