@@ -1,8 +1,9 @@
 .venv/
+.vscode/
 __pycache__/
 /Calibri_Regular.ttf
 /config/apiTwitterConfig.json
 /config/appInstagramConfig.json
 /config/cloudinaryConfig.json
 .git/
-.vscode/
+

@@ -15,7 +15,7 @@
             "name": "Python: Launch Main",
             "type": "python",
             "request": "launch",
-            "program": "main.py",
+            "program": "source/poster.py",
             "console": "integratedTerminal"
         },
         {

@@ -14,8 +14,6 @@ cloudinary.config(
 def upload(file_name) :
     a = cloudinary.uploader.upload(f"pictures/{file_name}.png", 
         public_id = "TopTweetOfDay")
-    os.remove(f"pictures/{file_name}.png")
-
     return a['secure_url']
 
 def delete_from_cloud():

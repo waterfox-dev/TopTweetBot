@@ -1,9 +1,12 @@
 import requests
 import json
 
-from source.twitter_api import *
-from source.text_to_image import *
-from source.cloud_support import *
+from twitter_api import *
+from text_to_image import *
+from cloud_support import *
+from api_writer import *
+
+from datetime import datetime
 
 with open("config/appInstagramConfig.json", 'r') as read_file:
     read_file = json.load(read_file)
@@ -25,6 +28,7 @@ def postInstagramQuote(image_link, caption):
 
     if 'id' in result:
         creation_id = result['id']
+        print(creation_id)
         second_url = 'https://graph.facebook.com/v10.0/{}/media_publish'.format(
             read_file['instagram']['instagram_business_account']['id'])
 
@@ -49,6 +53,8 @@ try:
 except:
     text_to_image(transform(top_tweet.full_text, top_tweet.user.name))
 
-a = upload("text_to_image")
-postInstagramQuote(a, "Test")
-delete_from_cloud()
+date = f'{datetime.today().month}/{datetime.today().day}/{datetime.today().year}'
+
+link = upload("text_to_image")
+write_today(1, date, link, top_tweet.user.name, top_tweet.full_text)
+postInstagramQuote(link, "Test")

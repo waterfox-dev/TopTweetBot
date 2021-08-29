@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 from requests.api import get
-from source.twitter_api import get_tweet
-from source.image_dl import toimage
+from twitter_api import get_tweet
+from image_dl import toimage
 from pilmoji import Pilmoji
 
 def text_to_image(text, image = None) :
@@ -31,7 +31,7 @@ def text_to_image(text, image = None) :
         fnt =  ImageFont.truetype("font/Calibri_Regular.ttf", 65)
 
         with Pilmoji(img) as pilmoji :
-            pilmoji.text((100,300), text, font = fnt, fill = (230,230,230))
+            pilmoji.text((100,400), text, font = fnt, fill = (230,230,230))
         
         shape = [(40, 40), (1460, 1460)]
         rectangle_draw = ImageDraw.Draw(img)
@@ -44,10 +44,10 @@ def transform(text, author):
     text = list(text)
     lign_return = 0
     for element in range(len(text)) :
-        if (element > 40 and element < 50 and text[element] == " " and lign_return == 0) :
+        if (element > 40 and element < 60 and text[element] == " " and lign_return == 0) :
             text[element] = '\n'
             lign_return += 1
-        elif (element > 80 and element < 90 and text[element] == " "  and lign_return == 1) :
+        elif (element > 80 and element < 100 and text[element] == " "  and lign_return == 1) :
             text[element] = '\n'
             lign_return += 1
         elif (element > 130 and element < 140 and text[element] == " "  and lign_return == 2) :
@@ -69,6 +69,6 @@ def transform(text, author):
        
     link_indice = new_text.find("https://t.co/")
     new_text = new_text[:link_indice]
-    new_text += f"\n \n \nAuthor : {author}"
+    new_text += f"\n \n \n      Author : {author}"
     
     return new_text
