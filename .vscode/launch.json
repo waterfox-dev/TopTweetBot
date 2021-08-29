@@ -19,7 +19,7 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: Debug Servor",
+            "name": "Python: Debug Server",
             "type": "python",
             "request": "launch",
             "program": "app.py",

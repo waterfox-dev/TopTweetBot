@@ -31,7 +31,7 @@ def text_to_image(text, image = None) :
         fnt =  ImageFont.truetype("font/Calibri_Regular.ttf", 65)
 
         with Pilmoji(img) as pilmoji :
-            pilmoji.text((100,400), text, font = fnt, fill = (230,230,230))
+            pilmoji.text((200,400), text, font = fnt, fill = (230,230,230))
         
         shape = [(40, 40), (1460, 1460)]
         rectangle_draw = ImageDraw.Draw(img)
