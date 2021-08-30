@@ -11,3 +11,6 @@ window.onclick = function(event) {
         settingsPopup.style.display = "none";
     }
 }
+
+
+

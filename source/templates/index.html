@@ -8,15 +8,29 @@
         
     </head>
     <body>
+    
+        <div class = "buttonClass">
+            <button id = "buttonSettings" class = "buttonSettings">Settings</button>            
+        </div>
+        
         <h1 class = "headerTitle">What's happen on Twitter with one picture</h1>
+
         <h2 class = "headerName">Top Tweet Bot</h2>
-        <img class = "headerPicture" src ="{{today_post}}">
-        <button id = "buttonSettings">Test</button>
+
+        <img class = "headerLogo" src = "{{ url_for('static', filename='content/favicon.ico') }}">
+        <img class = "headerPicture" src ="{{today_post}}">        
+
         <div id = "settingsPopup" class = "settingsPopup">
             <div class = "settingsContent">
-                <p>Settings</p>
+                <p class = "settingsTitle">Settings</p>
+                <p class = "settingsCategory">Color Theme</p>
+                <button class = "darkButton" onclick = "setDarkMode()">Dark Mode</button>
+                <button class = "blueButton" onclick = "setBlueMode()">Blue Mode</button>
+                <button class = "whiteButton" onclick = "setWhiteMode()">White Mode</button>
             </div>
         </div>
         <script src={{ url_for('static', filename='scripts/settings.js')}}></script>
+
+
     </body>
 </html>

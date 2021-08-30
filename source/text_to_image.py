@@ -13,7 +13,7 @@ def text_to_image(text, image = None) :
         with Pilmoji(img) as pilmoji :
             pilmoji.text((175,175), text, font = fnt, fill = (255,255,255))
         
-        shape = [(40, 40), (1460, 1460)]
+        shape = [(20, 20), (1480, 1480)]
         rectangle_draw = ImageDraw.Draw(img)
         rectangle_draw.rectangle(shape, outline="#1d9bf0", width=5)
 
@@ -31,9 +31,9 @@ def text_to_image(text, image = None) :
         fnt =  ImageFont.truetype("font/Calibri_Regular.ttf", 65)
 
         with Pilmoji(img) as pilmoji :
-            pilmoji.text((200,400), text, font = fnt, fill = (230,230,230))
+            pilmoji.text((150,400), text, font = fnt, fill = (230,230,230))
         
-        shape = [(40, 40), (1460, 1460)]
+        shape = [(20, 20), (1480, 1480)]
         rectangle_draw = ImageDraw.Draw(img)
         rectangle_draw.rectangle(shape, outline="#1d9bf0", width=5)
 

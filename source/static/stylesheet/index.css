@@ -8,8 +8,7 @@ body{
 }
 
 .headerTitle{
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .headerName{
@@ -28,6 +27,7 @@ body{
 }
 
 .settingsPopup {
+    text-align: center;
     display: none; 
     position: fixed;
     z-index: 1;
@@ -43,12 +43,71 @@ body{
   /* Modal Content/Box */
 .settingsContent {
     background-color: #fefefe;
+    color : black;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    width: 20%; 
 }
-  
+
+.headerLogo{
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.buttonSettings {
+    border-radius: 5ch;
+    border-width: 0;
+    background-color: #1a8cd8;
+    font-size: 20px;   
+    color: #fefefe; 
+    width: 80%;
+    height: 100%;
+}
+
+.buttonClass {
+    margin-left: 95%;
+}
+
+.settingsTitle {
+    font-size: 30px;
+    color : #1a8cd8;
+}
+
+.settingsCategory {
+    font-size : 24px;
+    font-style: italic;
+}
+
+.darkButton {
+    border-width: 0;
+    border-radius: 1ch;
+    font-size: 18px;
+    color : white;
+    background-color: #000000;
+}
+
+.blueButton {
+    border-width: 0;
+    border-radius: 1ch;
+    font-size: 18px;
+    color : white;
+    background-color: #1a8cd8;
+}
+
+.whiteButton {
+    border-width: 0.1px;
+    border-radius: 1ch;
+    font-size: 18px;
+    color : black;
+    background-color: #fefefe;
+}
+
+
   /* The Close Button */
 /* .close {
     color: #aaa;
