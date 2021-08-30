@@ -1,5 +1,6 @@
 import requests
 import json
+import random 
 
 from twitter_api import *
 from text_to_image import *
@@ -54,6 +55,10 @@ except:
     text_to_image(transform(top_tweet.full_text, top_tweet.user.name))
 
 date = f'{datetime.today().month}/{datetime.today().day}/{datetime.today().year}'
+
+id = random.randint(1,10000000)
+
+write_post(id, date, top_tweet.user.name, top_tweet.full_text)
 
 link = upload("text_to_image")
 write_today(1, date, link, top_tweet.user.name, top_tweet.full_text)
