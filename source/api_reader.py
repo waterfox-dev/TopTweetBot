@@ -18,7 +18,7 @@ def get_by_id(id) :
             if keys == str(id) :
                 return reading_data[keys]
             else :
-                raise TTBError("ID not found")
+                return "ID not found"
 
 def get_by_date(date) :
     with open("API/data.json", 'r') as reading_data :
@@ -28,7 +28,7 @@ def get_by_date(date) :
             if reading_data[keys]['date'] == date :
                 return reading_data[keys]
             else :
-                raise TTBError("Date not found")
+                return "No dates founds"
 
 def search_content(search_str) :
     with open("API/data.json", 'r') as reading_data :
@@ -38,4 +38,5 @@ def search_content(search_str) :
             if search_str in reading_data[keys]['text'] :
                 return reading_data[keys]
             else :
-                raise TTBError("This research return nothing, try an another element")
+                return "Element not found"
+
